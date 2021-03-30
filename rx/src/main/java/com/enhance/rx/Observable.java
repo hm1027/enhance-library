@@ -1,4 +1,4 @@
-package com.enhance.adapter.rx;
+package com.enhance.rx;
 
 import androidx.annotation.IntDef;
 
