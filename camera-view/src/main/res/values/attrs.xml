@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ScanView">
+        <attr name="text" format="string"/>
+        <attr name="boolean35" format="boolean"/>
+        <attr name="color35"  format="color"/>
+        <attr name="integer35" format="integer"/>
+        <attr name="enum35" format="enum">
+            <enum name="enum0" value="0" />
+            <enum name="enum1" value="1" />
+            <enum name="enum2" value="2" />
+        </attr>
+        <attr name="dimension35" format="dimension"/>
+        <attr name="float35" format="float"/>
+        <attr name="reference351" format="reference"/>
+        <attr name="reference352" format="reference"/>
+        <attr name="reference353" format="reference"/>
+        <attr name="reference354" format="reference"/>
+        <attr name="fraction35" format="fraction"/>
+        <attr name="bg351" format="color|reference"/>
+        <attr name="bg352" format="color|reference"/>
+        <attr name="flag35" >
+            <flag name="flag1" value="1"/>
+            <flag name="flag2" value="2"/>
+        </attr>
+
+    </declare-styleable>
+</resources>
