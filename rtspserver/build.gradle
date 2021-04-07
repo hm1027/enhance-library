@@ -1,12 +1,12 @@
 apply plugin: 'com.android.library'
-apply plugin: 'maven'
+
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
 
 
     defaultConfig {
-        minSdkVersion 21
+        minSdkVersion 15
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -21,32 +21,14 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-    compileOptions {
-        sourceCompatibility = 1.8
-        targetCompatibility = 1.8
-    }
 
-}
-
-uploadArchives{
-    repositories.mavenDeployer{
-        // 配置本地仓库路径，项目根目录下的repository目录中
-        repository(url: uri('../repository'))
-        pom.groupId = "me.adapter.enhance"// 唯一标识（通常为模块包名，也可以任意）
-        pom.artifactId = "EnhanceLib" // 项目名称（通常为类库模块名称，也可以任意）
-        pom.version = "alpha-1.0.0" // 版本号
-    }
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'androidx.appcompat:appcompat:1.0.2'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
-
-    api project(':camera-view')
-    api project(':rx')
-    api project(':log')
+    implementation files('libs/rtspserver.jar')
 }

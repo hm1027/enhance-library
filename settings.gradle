@@ -1,2 +1,2 @@
-include ':app', ':adapter-enhance', ':rx', ':log', ':camera-view'
+include ':app', ':adapter-enhance', ':rx', ':log', ':camera-view', ':rtspserver'
 rootProject.name='My Application'
